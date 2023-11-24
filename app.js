@@ -12,7 +12,7 @@ app.use(Express.json());
 
 //configuring port to use environment variable PORT or 5000
 // const port = process.env.PORT || 5000;
-const port = `0.0.0.0:${PORT}`;
+const port = `0.0.0.0:$PORT`;
 
 //Connecting to the database.....
 connectDB();
