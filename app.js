@@ -11,8 +11,8 @@ const app = Express();
 app.use(Express.json());
 
 //configuring port to use environment variable PORT or 5000
-// const port = process.env.PORT || 5000;
-const port = `0.0.0.0:$PORT`;
+const port = process.env.PORT || 5000;
+
 
 //Connecting to the database.....
 connectDB();
@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0" ,() => {
     console.log(`Server is listening at port no. ${port}`);
 })
 
